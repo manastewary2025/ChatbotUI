@@ -1,0 +1,115 @@
+/* Chatbot Floating Button */
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.chatbot-icon:hover {
+  background-color: #0056b3;
+}
+
+/* Chatbot Popup */
+.chat-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Scrollbar for Messages */
+.chat-container .overflow-y-auto {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Chat Header */
+.chat-container .bg-blue-600 {
+  background-color: #007bff;
+}
+
+.chat-container .border-b {
+  border-bottom: 1px solid #ddd;
+}
+
+/* User & Bot Messages */
+.my-2 {
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 5px 0;
+  word-wrap: break-word;
+  font-size: 0.9rem;
+}
+
+/* User messages */
+.bg-green-500 {
+  background-color: #28a745;
+  color: white;
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* Bot messages */
+.bg-purple-500 {
+  background-color: #6f42c1;
+  color: white;
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Chat Input */
+.flex.p-3 {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  background-color: white;
+}
+
+.flex.p-3 input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.flex.p-3 button {
+  margin-left: 8px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.flex.p-3 button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .chat-container {
+    width: 90%;
+    right: 5%;
+    bottom: 70px;
+  }
+}
